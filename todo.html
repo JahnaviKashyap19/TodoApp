@@ -1,0 +1,50 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Todo App</title>
+     <link rel="stylesheet" href="style.css">
+     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+     <script src="./firebase.js"></script>
+     <script src="./script.js"></script>
+ </head>
+ <body>
+     <div class="background-banner"></div>
+     <div class="container">
+         <div class="header">
+             <div class="title">TODO APP</div>
+             <div>
+                <img class="theme" onclick="changeTheme()" src="./assets/icon-sun.svg" alt="theme-icon" />
+            </div>
+         </div>
+            <div class="new-todo">
+            <div class="check">
+                <div class="check-mark-ip"></div>
+            </div>
+            <div class="new-todo-input">
+                <form onsubmit="addItem(event)">
+                    <input id="todo-input" autocomplete="off"type="text"placeholder="Create a new Todo..."/>
+                </form>
+            </div>
+            </div>
+            <div class="todo-wrapper">
+                <div class="todo-items">
+                </div>
+                <div class="todo-info">
+                    <div id="item-count" class="items-left"></div>
+                    <!--<div class="item-status">
+                        <span id="all" class="active">All</span>
+                        <span id="active">Active</span>
+                        <span id="complete">Completed</span>
+                    </div>-->
+                    <div class="items-clear"><span onclick="clearCompleted()">Clear Completed</span>
+                    </div>
+                </div>
+            </div>
+     </div>
+ </body>
+ </html>
